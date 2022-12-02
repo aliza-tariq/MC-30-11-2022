@@ -37,35 +37,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume()
     {
         super.onResume();
-        Log.d("Activity1","onCreate");
+        Log.d("Activity1","onResume : ");
     }
 
     @Override
     protected void onPause()
     {
         super.onPause();
-        Log.d("Activity1","onStart : ");
+        Log.d("Activity1","onPause : ");
     }
 
     @Override
     protected void onStop()
     {
         super.onStop();
-        Log.d("Activity1","onCreate");
+        Log.d("Activity1","onStop : ");
     }
 
     @Override
     protected void onDestroy()
     {
         super.onDestroy();
-        Log.d("Activity1","onStart : ");
+        Log.d("Activity1","onDestroy : ");
     }
 
     @Override
     protected void onRestart()
     {
         super.onRestart();
-        Log.d("Activity1","onCreate");
+        Log.d("Activity1","onRestart : ");
     }
 
 
