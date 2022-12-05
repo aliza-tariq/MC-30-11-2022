@@ -3,6 +3,7 @@ package com.example.actitivity_lifecycle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -13,7 +14,7 @@ public class List_View extends AppCompatActivity {
     ArrayList<String> array=new ArrayList<>();
     ListView list;
     EditText text;
-    Button buuton;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,9 @@ public class List_View extends AppCompatActivity {
         list=findViewById(R.id.mylistview);
         text=findViewById(R.id.mytext);
         button=findViewById(R.id.mybutton);
-        Arra
+        ArrayAdapter ad=new ArrayAdapter(this,
+                andriod.R.layout.Simple_list_item,array);
+        list.setAdapter(ad);
+
     }
 }
