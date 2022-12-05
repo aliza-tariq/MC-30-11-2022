@@ -11,7 +11,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class List_View extends AppCompatActivity {
-    ArrayList<String> array=new ArrayList<>();
+    ArrayList<String> arrayList=new ArrayList<>();
     ListView list;
     EditText text;
     Button button;
@@ -20,15 +20,15 @@ public class List_View extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
-        array.add("Red");
-        array.add("blue");
-        array.add("green");
+        arrayList.add("Red");
+        arrayList.add("blue");
+        arrayList.add("green");
 
         list=findViewById(R.id.mylistview);
         text=findViewById(R.id.mytext);
         button=findViewById(R.id.mybutton);
         ArrayAdapter ad=new ArrayAdapter(this,
-                andriod.R.layout.Simple_list_item,array);
+                android.R.layout.simple_list_item_1,arrayList);
         list.setAdapter(ad);
 
     }
