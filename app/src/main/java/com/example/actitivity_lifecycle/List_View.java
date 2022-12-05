@@ -25,7 +25,7 @@ public class List_View extends AppCompatActivity {
         arrayList.add("green");
 
         list=findViewById(R.id.mylistview);
-        text=findViewById(R.id.mytext);
+        text=findViewById(R.id.mytext1);
         button=findViewById(R.id.mybutton);
         ArrayAdapter ad=new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1,arrayList);
