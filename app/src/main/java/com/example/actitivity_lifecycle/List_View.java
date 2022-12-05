@@ -3,6 +3,7 @@ package com.example.actitivity_lifecycle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +31,15 @@ public class List_View extends AppCompatActivity {
         ArrayAdapter ad=new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1,arrayList);
         list.setAdapter(ad);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                arrayList.add(text.getText().toString());
+                list.setAdapter(ad);
+
+            }
+        });
 
     }
 }
