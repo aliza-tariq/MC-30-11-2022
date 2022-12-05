@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,10 +37,19 @@ public class List_View extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 arrayList.add(text.getText().toString());
-                list.setAdapter(ad);
+               // list.setAdapter(ad);
+                ad.notifyDataSetChanged(); //to notify data chnage/added same as above
 
             }
         });
 
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //when we click on any list item button text changed
+                
+                button.setText(arrayList.get(i));
+            }
+        });
     }
 }
