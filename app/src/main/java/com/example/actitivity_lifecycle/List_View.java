@@ -46,9 +46,8 @@ public class List_View extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //when we click on any list item button text changed
-                
-                button.setText(arrayList.get(i));
+                //when we click on any list item button text change
+                button.setText(arrayList.get(i)); //index
             }
         });
     }
